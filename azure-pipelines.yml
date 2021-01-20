@@ -11,11 +11,14 @@ pool:
   demands:
   - npm
 
+
 variables:
-  buildConfiguration: 'Release'
   wwwRootDir: 'Tailspin.SpaceGame.Web/wwwroot'
   dotNetSdkVersion: '3.1.300'
 
+parameters:
+  buildConfiguration: 'Release'
+  
 steps:
 - task: UseDotNet@2
   displayName: 'Use .NET Core SDK $(dotnetSdkVersion)'
